@@ -1,0 +1,25 @@
+{
+    "diagnostics.globals": [
+        "clientkeys",
+        "globalkeys",
+        "clientbuttons",
+        "client",
+        "root",
+        "awesome",
+        "myawesomemenu",
+        "mymainmenu",
+        "mylauncher",
+        "gears",
+        "awful",
+        "wibox",
+        "beautiful",
+        "naughty",
+        "menubar",
+        "hotkeys_popup",
+        "debian",
+        "has_fdo",
+        "freedesktop",
+        "mykeyboardlayout",
+        "mytextclock"
+    ]
+}

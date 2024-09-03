@@ -88,4 +88,4 @@ beautiful.useless_gap = 8
 -- awful.spawn.with_shell("picom --config /home/sunil/.config/picom/picom.conf")
 
 -- integrate pywal
-awful.spawn.with_shell("wal -R")
+-- awful.spawn.with_shell("wal -R")

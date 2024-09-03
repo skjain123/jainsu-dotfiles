@@ -1,0 +1,8 @@
+{
+    "diagnostics.globals": [
+        "vim",
+        "checker",
+        "install",
+        "local"
+    ]
+}

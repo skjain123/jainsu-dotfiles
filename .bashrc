@@ -97,9 +97,8 @@ alias mod.aw='cd /home/sunil/.config/awesome;nvim'
 alias mod.nv='cd /home/sunil/.config/nvim;nvim'
 alias mod.ala='cd /home/sunil/.config/alacritty;nvim'
 
+# nvim shortcut
 alias n='nvim'
-
-alias test='bash /home/sunil/dotfiles/testscript.sh'
 
 # dotfile config
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'

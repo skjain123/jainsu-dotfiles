@@ -78,7 +78,8 @@ awful.spawn.with_shell("nitrogen --restore")
 -- gears.wallpaper.maximized("/home/sunil/Wallpapers/purplewallpaper.png", s)
 
 -- xrandr on startup
-awful.util.spawn("/home/sunil/.screenlayout/def.sh")
+-- awful.util.spawn("/home/sunil/.screenlayout/def.sh")
+awful.util.spawn("xrandr -s 1920x1080")
 
 -- Create gaps between windows
 beautiful.useless_gap = 8

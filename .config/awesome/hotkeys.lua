@@ -4,7 +4,9 @@ globalkeys = gears.table.join(
     awful.key({ modkey }, "Left", awful.tag.viewprev, { description = "view previous", group = "tag" }),
     awful.key({ modkey }, "Right", awful.tag.viewnext, { description = "view next", group = "tag" }),
     awful.key({ modkey }, "Escape", awful.tag.history.restore, { description = "go back", group = "tag" }),
-
+    awful.key({ modkey }, "j", awful.tag.viewprev, { description = "view previous", group = "tag" }),
+    awful.key({ modkey }, "k", awful.tag.viewnext, { description = "view next", group = "tag" }),
+    
     -- alt tabbing through windows
     awful.key({ "Mod1" }, "Tab", function()
         awful.client.focus.byidx(1)

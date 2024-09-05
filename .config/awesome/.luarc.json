@@ -20,6 +20,7 @@
         "has_fdo",
         "freedesktop",
         "mykeyboardlayout",
-        "mytextclock"
+        "mytextclock",
+        "s"
     ]
 }

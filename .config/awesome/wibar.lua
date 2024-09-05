@@ -113,11 +113,11 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
             mylauncher,
-            s.mytaglist,
             s.mypromptbox,
         },
+        s.mytaglist,
         s.mytasklist, -- Middle widget
-        {       -- Right widgets
+        {             -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             mykeyboardlayout,
             wibox.widget.systray(),

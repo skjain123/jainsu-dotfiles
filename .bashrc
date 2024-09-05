@@ -108,6 +108,19 @@ alias c='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
+
+# OSU ENGR SERVER ssh
+alias ssh.a='ssh jainsu@access.engr.oregonstate.edu'
+alias ssh.f1='ssh jainsu@flip1.engr.oregonstate.edu'
+alias ssh.f2='ssh jainsu@flip2.engr.oregonstate.edu'
+alias ssh.f3='ssh jainsu@flip3.engr.oregonstate.edu'
+alias ssh.os1='ssh jainsu@os1.engr.oregonstate.edu'
+alias ssh.os2='ssh jainsu@os2.engr.oregonstate.edu'
+alias ssh.dgx='ssh jainsu@submit-c.hpc.engr.oregonstate.edu'
+alias ssh.rabbit='ssh jainsu@rabbit.hpc.engr.oregonstate.edu'
+
+alias ssh.help='echo ssh.a ssh.f1 ssh.f2 ssh.f3 ssh.os1 ssh.os2 ssh.dgx ssh.rabbit'
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.

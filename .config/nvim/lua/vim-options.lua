@@ -18,14 +18,7 @@ vim.loader.enable()
 vim.keymap.set({ "i", "v" }, "<C-d>", "<Esc>", {})
 
 -- enter visual mode easier - like vscode
-vim.keymap.set({ "i", "n" }, "<S-Up>", "v", {})
-vim.keymap.set({ "i", "n" }, "<S-k>", "v", {})
-
-vim.keymap.set({ "i", "n" }, "<S-Down>", "v", {})
-vim.keymap.set({ "i", "n" }, "<S-j>", "v", {})
-
-vim.keymap.set({ "i", "n" }, "<S-Left>", "v", {})
-vim.keymap.set({ "i", "n" }, "<S-h>", "v", {})
-
-vim.keymap.set({ "i", "n" }, "<S-Right>", "v", {})
-vim.keymap.set({ "i", "n" }, "<S-l>", "v", {})
+-- vim.keymap.set({ "i", "n" }, "<S-Up>", "v", {})
+-- vim.keymap.set({ "i", "n" }, "<S-Down>", "v", {})
+-- vim.keymap.set({ "i", "n" }, "<S-Left>", "v", {})
+-- vim.keymap.set({ "i", "n" }, "<S-Right>", "v", {})

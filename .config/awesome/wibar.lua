@@ -55,10 +55,25 @@ local tasklist_buttons = gears.table.join(
 
 -- Create the wibar
 awful.screen.connect_for_each_screen(function(s)
-    -- Each screen has its own tag table.
-    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+    local l = awful.layout.suit
 
-    -- Create a promptbox for each screen
+    local layouts = {
+        l.max,
+        l.max,
+        l.max,
+        l.max,
+        l.tile,
+        l.max,
+        l.max,
+        l.max,
+        l.tile,
+        l.max,
+    }
+
+    -- Each screen has its own tag table.
+    local tagnames = beautiful.tagnames or { "1", "2", "3", "4", "5", "6", "7", "8", "9" }
+    awful.tag(tagnames, s, layouts)
+
     s.mypromptbox = awful.widget.prompt()
     -- Create an imagebox widget which will contain an icon indicating which layout we're using.
     -- We need one layoutbox per screen.
@@ -92,38 +107,29 @@ awful.screen.connect_for_each_screen(function(s)
         style = {
             shape_border_width = 1,
             shape_border_color = "#777777",
-            shape = gears.shape.rounded_bar,
+            shape = gears.shape.bar,
         },
     })
 
     -- Create the wibox -- configurations
     s.mywibox = awful.wibar({
         position = "top",
-        width = "75%",
+        width = "98%",
         screen = s,
         ontop = true,
-        shape = gears.shape.rounded_bar,
+        shape = gears.shape.bar,
         height = 30,
-        y = 100, -- currently working on this !!!!!!!!!!
     })
 
     -- Add widgets to the wibox
     s.mywibox:setup({
         layout = wibox.layout.align.horizontal,
-        { -- Left widgets
-            layout = wibox.layout.fixed.horizontal,
-            mylauncher,
-            s.mypromptbox,
-        },
+        s.mypromptbox,
         s.mytaglist,
         s.mytasklist, -- Middle widget
-        {             -- Right widgets
-            layout = wibox.layout.fixed.horizontal,
-            mykeyboardlayout,
-            wibox.widget.systray(),
-            mytextclock,
-            s.mylayoutbox,
-        },
+        s.mytextclock,
+        wibox.widget.systray(),
+        s.mylayoutbox,
     })
 end)
 

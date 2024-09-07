@@ -86,7 +86,7 @@ beautiful.useless_gap = 8
 
 -- transparent windows
 -- awful.spawn.with_shell("pkill picom")
--- awful.spawn.with_shell("picom --config /home/sunil/.config/picom/picom.conf")
+awful.spawn.with_shell("picom --config /home/sunil/.config/picom/picom.conf --daemon")
 
 -- integrate pywal
 -- awful.spawn.with_shell("wal -R")

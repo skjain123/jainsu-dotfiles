@@ -58,16 +58,16 @@ awful.screen.connect_for_each_screen(function(s)
     local l = awful.layout.suit
 
     local layouts = {
+        l.tile.right,
+        l.tile.left,
+        l.tile.bottom,
+        l.tile.top,
+        l.corner.nw,
+        l.corner.ne,
+        l.corner.sw,
+        l.corner.se,
         l.max,
-        l.max,
-        l.max,
-        l.max,
-        l.tile,
-        l.max,
-        l.max,
-        l.max,
-        l.tile,
-        l.max,
+        l.max.fullscreen,
     }
 
     -- Each screen has its own tag table.

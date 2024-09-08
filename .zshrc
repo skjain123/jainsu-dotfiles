@@ -11,8 +11,9 @@ eval "$(starship init zsh)"
 
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
 
+zinit light zsh-users/zsh-autosuggestions
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="bold,underline"
 
 # Keybindings
 bindkey -e
@@ -34,6 +35,7 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # Completion styling
+autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no

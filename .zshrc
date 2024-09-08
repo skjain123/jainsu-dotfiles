@@ -92,7 +92,12 @@ alias_rem() {
 export alias_rem
 
 
-
+# PRINT TODO LIST
+if [ -f ~/TODO.txt ]; then
+    cat ~/TODO.txt
+else 
+    touch ~/TODO.txt
+fi
 
 
 # -------------------------------------------------------------------

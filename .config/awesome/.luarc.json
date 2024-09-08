@@ -22,5 +22,8 @@
         "mykeyboardlayout",
         "mytextclock",
         "s"
+    ],
+    "diagnostics.disable": [
+        "lowercase-global"
     ]
 }

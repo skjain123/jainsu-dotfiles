@@ -48,7 +48,42 @@ eval "$(zoxide init --cmd cd zsh)"
 
 if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
+else 
+    mkdir ~/.zsh_aliases
 fi
+
+aliasp() {
+    if [ "$#" -ne 2 ]; then
+        echo "Error: Usage is aliasp <alias_name> <command>"
+        return 1
+    fi
+
+    echo "alias $1='$2'" >> ~/.zsh_aliases
+    alias $1=$2
+    # source ~/.zsh_aliases
+}
+export aliasp
+
+alias_rem() {
+    if [ "$#" -ne 1 ]; then
+        echo "Error: Usage is aliasp <alias_name>"
+        return 1
+    fi
+    if grep -q "alias $1=" ~/.zsh_aliases; then
+        #remove alias
+        sed -i "/alias $1=/d" ~/.zsh_aliases
+        unalias $1
+
+        echo "Alias $1 removed"
+    else
+        echo "Error: Alias '$1' not found in .zsh_aliases"
+        return 1
+    fi 
+}
+export alias_rem
+
+
+
 
 
 # -------------------------------------------------------------------

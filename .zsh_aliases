@@ -51,3 +51,4 @@ config_status_untracked() {
 }
 export config_status_untracked
 alias cstat=config_status_untracked
+alias cls='c ls-tree --name-only HEAD .'

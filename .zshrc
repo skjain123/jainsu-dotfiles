@@ -46,6 +46,12 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
+
+
+
+
+# ALIASES
+
 if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 else 
